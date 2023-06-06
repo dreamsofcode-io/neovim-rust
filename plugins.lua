@@ -35,7 +35,10 @@ local plugins = {
   },
   {
     'saecki/crates.nvim',
-    ft = {"rust", "toml"},
+    ft = {"toml"},
+    init = function()
+      require("core.utils").load_mappings("crates")
+      end,
     config = function(_, opts)
       local crates  = require('crates')
       crates.setup(opts)
@@ -43,8 +46,7 @@ local plugins = {
         sources = { { name = "crates" }}
       })
       crates.show()
-      require("core.utils").load_mappings("crates")
-    end,
+      end,
   },
   {
     "rust-lang/rust.vim",
