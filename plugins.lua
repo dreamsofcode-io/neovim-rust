@@ -20,7 +20,9 @@ local plugins = {
     "mrcjkb/rustaceanvim",
     version = "^4",
     ft = { "rust" },
-    config = function(_, _opts)
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require "custom.configs.rustaceanvim"
     end
   },
   {
