@@ -20,8 +20,7 @@ local plugins = {
     "mrcjkb/rustaceanvim",
     version = "^4",
     ft = { "rust" },
-    config = function(_, opts)
-      require('rustaceanvim').setup(opts)
+    config = function(_, _opts)
     end
   },
   {
