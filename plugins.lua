@@ -17,14 +17,11 @@ local plugins = {
     end,
   },
   {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-    opts = function ()
-      return require "custom.configs.rust-tools"
-    end,
+    "mrcjkb/rustaceanvim",
+    version = "^4",
+    ft = { "rust" },
     config = function(_, opts)
-      require('rust-tools').setup(opts)
+      require('rustaceanvim').setup(opts)
     end
   },
   {
